@@ -1,3 +1,13 @@
+:root {
+    --title-font: "Inconsolata", sans-serif;
+    --body-font: "Space Mono", sans-serif;
+    --attrib-font: "Montserrat", sans-serif;
+
+    --gray1: #333333;
+    --gray2: #4f4f4f;
+    --white: #ffffff;
+}
+
 *,
 *::after,
 *::before {
@@ -7,8 +17,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Space Mono", sans-serif;
-    color: #333333;
+    font-family: var(--body-font);
+    color: var(--gray1);
 }
 
 main {
@@ -28,18 +38,18 @@ img {
 
 button {
     font-size: 14px;
-    color: #ffffff;
-    background-color: #333333;
+    color: var(--white);
+    background-color: var(--gray1);
     border: none;
     padding: 24px 43px;
-    font-family: "Space Mono", sans-serif;
+    font-family: var(--body-font);
     margin: 100px 0;
     cursor: pointer;
 }
 
 .title {
     margin: 0;
-    font-family: "Inconsolata", sans-serif;
+    font-family: var(--title-font);
     font-weight: 700;
     font-size: 24px;
     letter-spacing: -2px;
@@ -56,11 +66,11 @@ button {
 .text {
     font-size: 18px;
     margin-top: 30px;
-    color: #4f4f4f;
+    color: var(--gray2);
 }
 
 .attrb {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--attrib-font);
     font-size: 14px;
     font-weight: 600;
     margin: 0;
@@ -71,5 +81,5 @@ button {
 }
 
 .link:visited {
-    color: #333333;
+    color: var(--gray1);
 }
