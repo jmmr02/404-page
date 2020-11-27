@@ -24,12 +24,13 @@ body {
     padding: 0;
     font-family: var(--body-font);
     color: var(--gray1);
+    height: 100%;
 }
 
 main {
     width:87%;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 24px;
     padding-bottom: 42px;
 }
 
@@ -48,7 +49,8 @@ button {
     border: none;
     padding: 1.7em 3em;
     font-family: var(--body-font);
-    margin: 100px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
     cursor: pointer;
 }
 
@@ -73,7 +75,7 @@ button {
     font-size: 1.8rem;
     margin-top: 30px;
     color: var(--gray2);
-    line-height: 2.7rem;
+    line-height: 1.7;
 }
 
 .attrb {
@@ -81,6 +83,7 @@ button {
     font-size: 1.4rem;
     font-weight: 600;
     margin: 0;
+    text-align: center;
 }
 
 .link {
@@ -90,4 +93,60 @@ button {
 
 .link:visited {
     color: var(--gray1);
+}
+
+
+/* MEDIA QUERIES  */
+
+@media (min-width: 768px) {
+    main {
+        padding-top: 40px;
+    }
+}
+
+@media (min-width: 1366px) {
+    main {
+        height: 100vh;
+    }
+
+    .container {
+        position: relative;
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    img {
+        margin: 0;
+        margin-right: 118px;
+        width: 539px;
+        height: 447px;
+    }
+
+    button {
+        margin-top: 60px;
+        margin-bottom: 0;
+    }
+
+    .heading {
+        width: 586px;
+        font-size: 6.4rem;
+    }
+
+    .text {
+        width: 385px;
+        font-size: 2.4rem;
+        line-height: 1.7;
+        margin-bottom: 0;
+    }
+
+    .attrb {
+        position: absolute;
+        bottom: 0;
+
+        /* center an absolutely positioned element horizontally by offsetting 50% from left
+        and adding a negative margin with half of the width element as the value  */
+        left: 50%;
+        margin-left: -102px;
+    }
 }
