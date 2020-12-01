@@ -1,152 +1,109 @@
 :root {
-    --title-font: "Inconsolata", sans-serif;
-    --body-font: "Space Mono", sans-serif;
-    --attrib-font: "Montserrat", sans-serif;
+	/* Font families  */
+	--ff-primary: "Space Mono", sans-serif;
+	--ff-secondary: "Inconsolata", sans-serif;
+	--ff-tertiary: "Montserrat", sans-serif;
 
-    --gray1: #333333;
-    --gray2: #4f4f4f;
-    --white: #ffffff;
+	/* Color  */
+	--color-primary: #333333;
+	--color-secondary: #4f4f4f;
+	--color-tertiary: #ffffff;
 }
 
 html {
-    /* Set the font size to (10px / 16px) * 100 for easier conversion rem and em values  */
-    font-size: 62.5%;
+	/* Set the font size to (10px / 16px) * 100 for easier conversion rem and em values  */
+	font-size: 62.5%;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--body-font);
-    color: var(--gray1);
-    height: 100%;
+	font-family: var(--ff-primary);
+	color: var(--color-primary);
+	position: relative;
 }
 
-main {
-    width:87%;
-    margin: 0 auto;
-    padding-top: 24px;
-    padding-bottom: 42px;
+.container {
+	width: 90%;
+	max-width: 1200px;
+	padding-top: 4rem;
+	margin: 0 auto;
 }
 
 img {
-    display: block;
-    width: 83%;
-    max-width: 540px;
-    height: auto;
-    margin: 64px auto 60px;
-}
-
-button {
-    font-size: 1.4rem;
-    color: var(--white);
-    background-color: var(--gray1);
-    border: none;
-    padding: 1.7em 3em;
-    font-family: var(--body-font);
-    margin-top: 100px;
-    margin-bottom: 100px;
-    cursor: pointer;
+	display: block;
+	width: 83%;
+	max-width: 540px;
+	height: auto;
+	margin: 64px auto 60px;
 }
 
 .title {
-    margin: 0;
-    font-family: var(--title-font);
-    font-weight: 700;
-    font-size: 2.4rem;
-    letter-spacing: -2px;
-    text-transform: uppercase;
+	margin: 0;
+	font-family: var(--ff-secondary);
+	font-weight: 700;
+	font-size: 2.4rem;
+	letter-spacing: -2px;
+	text-transform: uppercase;
 }
 
 .heading {
-    margin: 0;
-    font-weight: 700;
-    font-size: 4.8rem;
-    letter-spacing: -1px;
-    word-spacing: -15px;
+	margin-bottom: 0;
+	margin-top: 1.5em;
+	font-weight: 700;
+	font-size: 4.8rem;
+	letter-spacing: -1px;
+	word-spacing: -10px;
 }
 
 .text {
-    font-size: 1.8rem;
-    margin-top: 30px;
-    color: var(--gray2);
-    line-height: 1.7;
+	font-size: 1.8rem;
+	margin-top: 2em;
+	margin-bottom: 0;
+	color: var(--color-secondary);
+	line-height: 1.7;
 }
 
-.attrb {
-    font-family: var(--attrib-font);
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin: 0;
-    text-align: center;
+.button,
+.button:visited,
+.button:focus,
+.button:active {
+	display: inline-block;
+	font-size: 1.4rem;
+	color: var(--color-tertiary);
+	background-color: var(--color-primary);
+	text-decoration: none;
+	border: none;
+	font-family: var(--ff-primary);
+	margin-top: 5em;
+	margin-bottom: 10em;
+	padding: 1.7em 3em;
+	cursor: pointer;
 }
 
-.link {
-    text-decoration: none;
-    color: var(--gray1)
+.attribution {
+	font-family: var(--ff-tertiary);
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: var(--color-primary);
+	position: absolute;
+	bottom: 1em;
+	left: 40%;
+	transform: translateX(-40%);
 }
 
-.link:visited {
-    color: var(--gray1);
+.link,
+.link:visited,
+.link:focus,
+.link:active {
+	text-decoration: none;
+	color: var(--color-primary);
 }
 
-
-/* MEDIA QUERIES  */
-
-@media (min-width: 768px) {
-    main {
-        padding-top: 40px;
-    }
-}
-
-@media (min-width: 1366px) {
-    main {
-        height: 100vh;
-    }
-
-    .container {
-        position: relative;
-        display: flex;
-        height: 100%;
-        align-items: center;
-    }
-
-    img {
-        margin: 0;
-        margin-right: 118px;
-        width: 539px;
-        height: 447px;
-    }
-
-    button {
-        margin-top: 60px;
-        margin-bottom: 0;
-    }
-
-    .heading {
-        width: 586px;
-        font-size: 6.4rem;
-    }
-
-    .text {
-        width: 385px;
-        font-size: 2.4rem;
-        line-height: 1.7;
-        margin-bottom: 0;
-    }
-
-    .attrb {
-        position: absolute;
-        bottom: 0;
-
-        /* center an absolutely positioned element horizontally by offsetting 50% from left
-        and adding a negative margin with half of the width element as the value  */
-        left: 50%;
-        margin-left: -102px;
-    }
-}
+/* =======================
+    MEDIA QUERIES
+======================= */
